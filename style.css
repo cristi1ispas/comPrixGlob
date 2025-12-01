@@ -1,0 +1,106 @@
+.bottom-nav{
+	display: flex;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	justify-content: space-evenly;
+	background-color: lightgoldenrodyellow;
+	width: 100%;
+	gap: 4%;
+	padding: 10px 0;
+	z-index: 1000;
+}
+.nav-item{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	width: 100%;
+	gap: 5px;
+	text-align: center;
+	padding: 0;
+	cursor: pointer;
+}
+.nav-item:hover .icon-wrapper{
+	background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 15px;
+	padding-left: 26px;
+	padding-right: 26px;
+	transition: all 0.15s ease-out;
+
+}
+.icon-wrapper {
+	display: flex;
+	align-items: center;
+	width: 2px;
+	justify-content: center;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	position: relative;
+	border-radius: 15px;
+	transition: padding 0.8s ease-out, background-color 0.2s ease-out;
+}
+.nav-item-active .icon-wrapper::before {
+	content: "";
+	position: absolute;
+
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	width: 54px;     
+	height: 30px;    
+	background: rgba(0, 0, 0, 0.25);
+	border-radius: 15px;
+
+	z-index: -1;
+}
+
+.no-color{
+	text-decoration: none;
+	color: inherit;
+}
+
+
+
+.Banner{
+	
+	padding: 10px;
+	padding-bottom: 0;
+	background-color: red;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+
+.Title{
+	margin: 0px;
+	padding: 10px;
+	display: flex;
+	 
+	height: 20px;
+}
+
+.ribbon{
+		
+	flex-grow: 1;
+	
+}
+.page{
+	height: 100%;
+	background-color: lightpink;
+	padding: 10px;
+	
+}
+
+.ribb-btn{
+	border-radius: 20px;
+	width: 100%;
+}
+.ribb-row {
+	display: flex;
+	justify-content: space-evenly;
+	gap: 5px;
+	margin-top: 10px;
+	width: 100%;
+}
+
