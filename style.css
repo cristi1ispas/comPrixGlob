@@ -4,7 +4,7 @@
 	bottom: 0;
 	left: 0;
 	justify-content: space-evenly;
-	background-color: lightgoldenrodyellow;
+	background-color: rgb(197, 0, 0);
 	width: 100%;
 	gap: 4%;
 	padding: 10px 0;
@@ -18,11 +18,11 @@
 	width: 100%;
 	gap: 5px;
 	text-align: center;
-	padding: 0;
+	padding: 0; 
 	cursor: pointer;
 }
 .nav-item:hover .icon-wrapper{
-	background-color: rgba(0, 0, 0, 0.1);
+	background-color: rgba(0, 0, 0, 0.2);
 	border-radius: 15px;
 	padding-left: 26px;
 	padding-right: 26px;
@@ -65,29 +65,104 @@
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	gap: 20px;
+	gap: 14px;
+	padding: 10px;
 }
 
 .mdc-top-app-bar__title{
 	display: flex;
 	width: 100%;
-	height: 120%;
-	border-radius: 24px;
+	height: 54px;
+	border-radius: 42px;
 	background-color: red;
 	justify-content: center;
 	align-items: center;
 }
+.mdc-top-app-bar__section{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 42px;
+}
+
+.drawer{
+    position: fixed;
+    top: 0;
+    left: -100%;     /* hidden outside */
+    width: 200px;
+    height: 100%;
+    background: white;
+    transition: left 0.3s ease;
+    z-index: 200;
+}
+.drawerList{
+	display: flex;
+	flex-direction: column;
+	padding-top: 64px;
+}
+.drawerListBtn{
+	display: flex;
+	align-items: center;
+	padding: 15px;
+	padding-left: 25px;
+}
+
+.drawer.open {
+    left: 0;         /* slides in */
+}
+
+.threeDotMenuWindow {
+	position: fixed;
+    bottom: -70%;     /* hidden outside */
+    width: 100%;
+    height: 70%;
+    background: white;
+    transition: bottom 0.3s ease;
+    z-index: 1000;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+}
+.threeDotMenuWindow.open {
+	bottom: 0;
+}
+
+.threeDotMenuWindowBlur{
+	position: fixed;
+    bottom: -100%;     /* hidden outside */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.0);
+    z-index: 999;
+    transition: background-color 0.3s ease-out;
+}
+.threeDotMenuWindowBlur.open {
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.threeDotMenuWindowTop{
+	display: flex;
+	padding: 10px;
+	flex-direction: row-reverse;
+}
+
+
+.menuBtnHamburg{
+	position: relative;
+	z-index: 1000;
+	height: 42px;
+	width: 42px;
+}
+
 
 
 
 
 .Banner{
 	
-	padding: 10px;
-	padding-bottom: 0;
 	background-color: green;
 	
-
+}
 .Title{
 	margin: 0px;
 	padding: 10px;
@@ -102,6 +177,9 @@
 }
 
 
+.md-tabs_display-block{
+	display: block;
+}
 
 .page{
 	height: 100%;
@@ -118,9 +196,7 @@
 	display: flex;
 	justify-content: space-between;
 	gap: 5px;
-	margin-top: 10px;
 	width: 100%;
-	min-height: 30px;
 	z-index: 100;
 }
 
