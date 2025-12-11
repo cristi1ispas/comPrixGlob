@@ -85,7 +85,7 @@
 	height: 42px;
 }
 
-.drawer{
+.shelfStyle{
     position: fixed;
     top: 0;
     left: -100%;     /* hidden outside */
@@ -93,21 +93,35 @@
     height: 100%;
     background: white;
     transition: left 0.3s ease;
-    z-index: 200;
+    z-index: 900;
 }
-.drawerList{
+.shelfList{
 	display: flex;
 	flex-direction: column;
 	padding-top: 64px;
 }
-.drawerListBtn{
+.shelfListBtn{
 	display: flex;
 	align-items: center;
 	padding: 15px;
 	padding-left: 25px;
 }
+.shelfBlur{
+	position: fixed;
+    left: -100%;     /* hidden outside */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.0);
+    z-index: 899;
+    transition: background-color 0.3s ease-out;
+}
+.shelfBlur.open{
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
 
-.drawer.open {
+
+.shelfStyle.open {
     left: 0;         /* slides in */
 }
 
@@ -138,6 +152,7 @@
 .threeDotMenuWindowBlur.open {
 	bottom: 0;
 	background-color: rgba(0, 0, 0, 0.5);
+	
 }
 
 .threeDotMenuWindowTop{
@@ -148,8 +163,7 @@
 
 
 .menuBtnHamburg{
-	position: relative;
-	z-index: 1000;
+	
 	height: 42px;
 	width: 42px;
 }

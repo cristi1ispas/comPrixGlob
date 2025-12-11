@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html> 
+	<head>
+		<meta name = "viewport" content="initial-scale=1, width=device-width">
+		<title> comPrix </title>
+		<style>
+			.body{
+				margin: 0px;
+			}
+		</style>
+		
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!-- Material Web -->
+			<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+			<script type="importmap">
+			{
+				"imports": {
+				"@material/web/": "https://esm.run/@material/web/"
+				}
+			}
+			</script>
+			<script type="module">
+				import '@material/web/all.js';
+				import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+
+				document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+			</script>
+			
+
+			
+			
+			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<!-- END OF Material Web -->
+	</head>
+	<body class="body">
+		<!-- BEGIN BANNER -->
+			<div class="Banner">
+				<div class="mdc-top-app-bar__row">
+
+					<!-- Hamburger menu -->
+					<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+						<mwc-icon-button class="shelfComponentAction material-icons menuBtnHamburg mdc-top-app-bar__navigation-icon mdc-icon-button">
+							<span id="shelfMenuIcon" class="mdc-top-app-bar__section">
+								<svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="#000000"><path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"/></svg>
+							</span>
+						</mwc-icon-button>
+					</section>
+
+					<!-- Search field -->
+					<span class="mdc-top-app-bar__title">Search %name%</span>
+
+					<!-- Three dot menu -->
+					<section class="threeDotMenuHideBtn mdc-top-app-bar__section  mdc-top-app-bar__section--align-end" role="toolbar">
+						<svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="#000000"><path d="M479.91-160q-24.24 0-41.41-17.26-17.17-17.26-17.17-41.5t17.26-41.41q17.27-17.16 41.5-17.16 24.24 0 41.41 17.26 17.17 17.26 17.17 41.5t-17.26 41.4Q504.14-160 479.91-160Zm0-261.33q-24.24 0-41.41-17.26-17.17-17.27-17.17-41.5 0-24.24 17.26-41.41 17.27-17.17 41.5-17.17 24.24 0 41.41 17.26 17.17 17.27 17.17 41.5 0 24.24-17.26 41.41-17.27 17.17-41.5 17.17Zm0-261.34q-24.24 0-41.41-17.26-17.17-17.26-17.17-41.5t17.26-41.4Q455.86-800 480.09-800q24.24 0 41.41 17.26 17.17 17.26 17.17 41.5t-17.26 41.41q-17.27 17.16-41.5 17.16Z"/></svg>
+					</section>
+				</div>
+
+				<!-- RIBBON -->
+
+				<div>
+					<md-tabs class="ribb-row md-tabs_display-block">
+						<md-primary-tab>Basic Info</md-primary-tab>
+						<md-primary-tab>Advanced</md-primary-tab>
+					</md-tabs>
+					
+				</div>
+			</div>
+		<!-- END OF BANNER -->
+
+		<!-- BEGIN shelf -->
+		
+		<div class="shelfComponentPannels shelfStyle">
+			<div class="shelfList">
+				<a href="#" class="no-color"><mwc-button class="shelfListBtn">GeneralShops</mwc-button></a>
+				<a href="#" class="no-color"><mwc-button class="shelfListBtn">Sodas</mwc-button></a>
+				<a href="#" class="no-color"><mwc-button class="shelfListBtn">Chips</mwc-button>
+				<a href="#" class="no-color"><mwc-button class="shelfListBtn">Sweets</mwc-button></a>
+			</div>
+		</div>
+
+		<div class="shelfComponentPannels shelfComponentAction shelfBlur"></div>
+		
+		<!-- END OF shelf -->
+
+		<!-- BEGING THREE DOT MENU -->
+
+		<div class="threeDotMenuWindowAnimationKlass threeDotMenuWindow">
+			
+			<mwc-icon-button class="threeDotMenuWindowTop">
+				<a class="no-color threeDotMenuHideBtn">
+					<svg xmlns="http://www.w3.org/2000/svg" height="46px" viewBox="0 -960 960 960" width="46px" fill="#000000"><path d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z"/></svg>
+				</a>
+			</mwc-icon-button>
+			<div class="menuList">
+
+			</div>
+		</div>
+		<div class="threeDotMenuWindowAnimationKlass threeDotMenuWindowBlur threeDotMenuHideBtn"></div>
+
+		<!-- END OF THREE DOT MENU -->
+
+		<div class="page">
+
+		</div>
+		<!-- BEGIN NAVIGATION-->
+			<nav class="bottom-nav">
+				<mwc-button class="nav-item nav-item-active" unelevated>
+					<span class="icon-wrapper">
+						<span class="icon material-icons">
+							<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M160-720v-80h640v80H160Zm0 560v-240h-40v-80l40-200h640l40 200v80h-40v240h-80v-240H560v240H160Zm80-80h240v-160H240v160Zm-38-240h556-556Zm0 0h556l-24-120H226l-24 120Z"/></svg>	
+						</span>
+					</span>
+					<span class="label">Local</span>
+				</mwc-button>
+
+				<a href="discounts.html" class="nav-item no-color">
+					<mwc-button class="nav-item" unelevated>
+						<span class="icon-wrapper">
+							<span class="icon material-icons">
+								<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-120v-240h80v160h160v80H120Zm480 0v-80h160v-160h80v240H600ZM287-327l-57-56 57-57H80v-80h207l-57-57 57-56 153 153-153 153Zm386 0L520-480l153-153 57 56-57 57h207v80H673l57 57-57 56ZM120-600v-240h240v80H200v160h-80Zm640 0v-160H600v-80h240v240h-80Z"/></svg>
+							</span>
+						</span>
+						<span class="label">Mixed</span>
+					</mwc-button>
+				</a>
+
+				<mwc-button class="nav-item" unelevated>
+					<span class="icon-wrapper">
+						<span class="icon material-icons">
+							<svg width="24px" height="24px" viewBox="-5 20 170 170" xmlns="http://www.w3.org/2000/svg">
+								<path style="fill:none;stroke:#000000;stroke-width:17;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:5;stroke-dasharray:none" d="M 16.760427,64.942851 150.92105,88.598989 Z"/>
+								<path style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-miterlimit:5;stroke-dasharray:none" d="m 22.368144,80.776982 v 69.223168 c 0,9.92126 6.890547,14.73659 15.476574,14.9319 5.337267,0.12142 38.547796,0.0919 62.916052,0.0522 v -30.3382 c 0,-1.79692 1.54248,-3.24372 3.45819,-3.24372 h 17.76998 c 1.9157,0 3.45818,1.4468 3.45818,3.24372 v 30.29015 c 1.10293,-0.003 1.70326,-0.004 1.70326,-0.004 10.05082,0 17.76584,-4.93915 17.76584,-14.9319 v -47.73611 z m 20.625614,21.647258 h 15.180469 c 3.499408,0 6.31641,2.93831 6.31641,6.58823 v 14.63735 c 0,3.64992 -2.817002,6.58823 -6.31641,6.58823 H 42.993758 c -3.499408,0 -6.31641,-2.93831 -6.31641,-6.58823 v -14.63735 c 0,-3.64992 2.817002,-6.58823 6.31641,-6.58823 z" />
+							</svg>
+
+
+
+
+						</span>
+					</span>
+					<span class="label">Supermarkets</span>
+				</mwc-button>
+			</nav>
+		<!-- END OF NAVIGATION -->
+		<!-- BEGIN FOOTER -->
+		<div class="footer">
+			
+		</div>
+		<!-- END OF FOOTER -->
+
+		<!-- BEGIN SCRIPTS -->
+
+			
+
+			<script>
+			    const shelfMenuBtn = document.querySelectorAll('.shelfComponentAction');
+			    const menuSelf = document.querySelectorAll('.shelfComponentPannels');
+
+			    shelfMenuBtn.forEach(btn => {
+			        btn.addEventListener("click", () => {
+						menuSelf.forEach(menuPannels =>{
+							menuPannels.classList.toggle("open");
+						});
+					});
+			    });
+			</script>
+
+			<script>
+			    const threeDotMenuHideBtn = document.querySelectorAll('.threeDotMenuHideBtn');
+			    const threeDotMenuPannels = document.querySelectorAll('.threeDotMenuWindowAnimationKlass');
+
+				threeDotMenuHideBtn.forEach(btn => {
+					btn.addEventListener("click", () => {
+						threeDotMenuPannels.forEach(threeDotMenuWindowsToMove =>{
+			        	threeDotMenuWindowsToMove.classList.toggle("open");
+			    	});
+					});
+				});
+
+
+			    
+			</script>
+
+
+		<!-- END OF SCRIPTS -->
+	</body>
+</html>
