@@ -12,6 +12,8 @@
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 			<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 			<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 			<script type="importmap">
 			{
 				"imports": {
@@ -25,11 +27,6 @@
 
 				document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
 			</script>
-			
-
-			
-			
-			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 			<style>
 				.body{
@@ -44,34 +41,32 @@
 			<div class="Banner">
 				<div class="topAppBar">
 
-					<!-- Hamburger menu -->
-				
-					
-				
 
-					<!-- Search field -->
+					
 					<span class="topSearchField">
 
+					<!-- Hamburger menu -->
 
-					<md-icon-button class="navDrawerComponentAction navDrawerMenuBtn">
-						<span id="navDrawerMenuIcon" class="navDrawerMenuBtn">
-							<svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#000000"><path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"/></svg>
-						</span>
+					<md-icon-button id="navDrawerMenuBtn" class="navDrawerComponentAction">
+						<md-icon id="navDrawerMenuIcon" class="material-icons">dehaze</md-icon>
 					</md-icon-button>
 
-					<md-filled-text-field label="search" type="search"> Search
+
+					<!-- Search field -->
+
+					<md-filled-text-field type="search"> Search
 					</md-filled-text-field>
 
-					<md-icon-button class="threeDotMenuComponentAction threeDotMenuBtn">
-						<span class="threeDotMenuBtn">
-							<svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#000000"><path d="M479.91-160q-24.24 0-41.41-17.26-17.17-17.26-17.17-41.5t17.26-41.41q17.27-17.16 41.5-17.16 24.24 0 41.41 17.26 17.17 17.26 17.17 41.5t-17.26 41.4Q504.14-160 479.91-160Zm0-261.33q-24.24 0-41.41-17.26-17.17-17.27-17.17-41.5 0-24.24 17.26-41.41 17.27-17.17 41.5-17.17 24.24 0 41.41 17.26 17.17 17.27 17.17 41.5 0 24.24-17.26 41.41-17.27 17.17-41.5 17.17Zm0-261.34q-24.24 0-41.41-17.26-17.17-17.26-17.17-41.5t17.26-41.4Q455.86-800 480.09-800q24.24 0 41.41 17.26 17.17 17.26 17.17 41.5t-17.26 41.41q-17.27 17.16-41.5 17.16Z"/></svg>
-						</span>
+					
+					<!-- Three dot menu -->
+					
+					<md-icon-button class="threeDotMenuComponentAction" id="threeDotMenuBtn">
+						<md-icon id="threeDotMenuIcon" class="material-icons">more_vert</md-icon>
 					</md-icon-button>
 
 					</span>
 
 
-					<!-- Three dot menu -->
 					
 				</div>
 
@@ -79,7 +74,10 @@
 				<!-- Advanced -->
 				<div class="ribb-row">
 
-					<md-outlined-button id="advancedToggleBtn" class="advancedDisabled " >Advanced</md-outlined-button>
+					<md-outlined-button id="advancedToggleBtn" class="advancedDisabled " >
+						<md-icon class="material-icons" slot="icon">tune</md-icon>
+						Advanced
+					</md-outlined-button>
 
 				</div>
 			</div>
@@ -91,33 +89,58 @@
 			
 
 		
-			<div class="navDrawerListCathegory">comPrixGlob</div>
-			<md-list>
-				<a href="#" class="no-color"><md-list-item class="navDrawerListItemActive" >
-					<md-icon slot="graphic">%icon%</md-icon>
-					<span class="navDrawerListLabel">StoreGeneral</span>
-				</md-list-item></a>
+			<div class="navDrawerListCathegory">project Mushroom</div>
 
-				<a href="#" class="no-color"><md-list-item class="navDrawerListItem">
-					<md-icon slot="graphic">%icon%</md-icon>
-					<span class="navDrawerListLabel">Sodas</span>
-				</md-list-item></a>
-				<a href="#" class="no-color"><md-list-item class="navDrawerListItem">
-					<md-icon slot="graphic">%icon%</md-icon>
-					<span class="navDrawerListLabel">Chips</span>
-				</md-list-item></a>
-				<a href="#" class="no-color"><md-list-item class="navDrawerListItem">
-					<md-icon slot="graphic">%icon%</md-icon>
-					<span class="navDrawerListLabel">Sweets</span>
-				</md-list-item></a>
-				<a href="#" class="no-color ro"><md-list-item class="navDrawerListItem">
-					<md-icon slot="graphic">%icon%</md-icon>
-					<span class="navDrawerListLabel">Beer</span>
-				</md-list-item></a>
-				<a href="#" class="no-color"><md-list-item class="navDrawerListItem">
-					<md-icon slot="graphic">%icon%</md-icon>
-					<span class="navDrawerListLabel">HHHmamsasa</span>
-				</md-list-item></a>
+			
+
+
+			<md-list>
+				
+				<md-list-item type="button"  id="navDrawerListItemActive" class="navDrawerListItem" href="index.html">
+					<md-icon  slot="start">public</md-icon>
+					General
+				</md-list-item>
+
+				<md-list-item type="button" class="navDrawerListItem" href="news.html">
+					<md-icon  slot="start">newspaper</md-icon>
+					Store News
+				</md-list-item>
+
+				<md-list-item type="button" class="navDrawerListItem" href="sodas.html">
+					<md-icon  slot="start">cleaning</md-icon>
+					Sodas
+				</md-list-item>
+
+				<md-list-item type="button" class="navDrawerListItem" href="chips.html">
+					<md-icon  slot="start">money_bag</md-icon>
+					Chips
+				</md-list-item>
+				<md-list-item type="button" class="navDrawerListItem" href="crackers.html">
+					<md-icon  slot="start">pet_supplies</md-icon>
+					Crackers
+				</md-list-item>
+				<md-list-item type="button" class="navDrawerListItem" href="sweets.html">
+					<md-icon  slot="start">cookie</md-icon>
+					Sweets
+				</md-list-item>
+				<md-list-item type="button" class="navDrawerListItem" href="fasting.html">
+					<md-icon  slot="start">nutrition</md-icon>
+					Fasting
+				</md-list-item>
+				<md-list-item type="button" class="navDrawerListItem" href="grill.html">
+					<md-icon  slot="start">outdoor_grill</md-icon>
+					Grill
+				</md-list-item>
+				<md-list-item type="button" class="navDrawerListItem" href="beverage.html">
+					<md-icon  slot="start">liquor</md-icon>
+					Beverages
+				</md-list-item>
+				
+
+
+
+
+				
 			</md-list>
 			
 		</div>
@@ -130,15 +153,27 @@
 
 		<div class="threeDotMenuComponentAnimation threeDotMenuWindow">
 			
-			<md-icon-button class="threeDotMenuWindowTop">
-				<a class="no-color threeDotMenuComponentAction">
-					<svg xmlns="http://www.w3.org/2000/svg" height="46px" viewBox="0 -960 960 960" width="46px" fill="#000000"><path d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z"/></svg>
-				</a>
-			</md-icon-button>
-			<div class="menuList">
+			<div class="threeDotMenuWindowTop">
 
+
+			
+			<md-filled-tonal-icon-button id="threeDotMenuClose" class="threeDotMenuComponentAction">
+				<md-icon id="threeDotMenuCloseX">close</md-icon>	
+			</md-filled-tonal-icon-button>
+			
 			</div>
+
+			<md-list>
+				<md-list-item id="aboutWebsiteBtn" type="button" class="threeDotMenuItem" href="https://github.com/cristi1ispas/comPrixGlob">
+					<md-icon slot="start">code</md-icon>GitHub
+				</md-list-item>
+				<md-list-item id="aboutWebsiteBtn" type="button" class="threeDotMenuItem">
+					<md-icon slot="start">info</md-icon>About
+				</md-list-item>
+			</md-list>
 		</div>
+
+
 		<div class="threeDotMenuComponentAnimation threeDotMenuWindowBlur threeDotMenuComponentAction"></div>
 
 		<!-- END OF THREE DOT MENU -->

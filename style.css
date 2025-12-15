@@ -1,5 +1,5 @@
 .Banner{
-	background-color: green;	
+	background-color: rgb(54, 195, 54);	
 }
 .topAppBar{
 	display: flex;
@@ -8,12 +8,20 @@
 	gap: 8px;
 	padding: 4px;
 }
-.navDrawerMenuBtn{
+#navDrawerMenuBtn{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 56px;
 	width: 56px;
+	--_focus-icon-color: white;
+	--_hover-icon-color: white;
+	--_icon-color: white;
+	--_pressed-icon-color: white;
+	--_pressed-state-layer-color: white;
+}
+#navDrawerMenuIcon{
+	height: 56px;
 }
 .topSearchField{
 	display: flex;
@@ -25,12 +33,21 @@
 	gap: 1px;
 	align-items: center;
 }
-.threeDotMenuBtn{
+#threeDotMenuBtn{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 56px;
 	width: 56px;
+	--_focus-icon-color: white;
+	--_hover-icon-color: white;
+	--_icon-color: white;
+	--_pressed-icon-color: white;
+	--_pressed-state-layer-color: white;
+}
+#threeDotMenuIcon.material-icons{
+	height: 56px;
+	font-size: 28px;
 }
 .ribb-row {
 	display: flex;
@@ -46,28 +63,32 @@
 	--_pressed-label-text-color: white;
 	--_focus-label-text-color: white;
 	--md-sys-typescale-label-large-size: 18px;
-	font-weight: 350;
-	--md-outlined-button-outline-width: 2px;
+	font-weight: 600;
+	--md-outlined-button-outline-width: 1.5px;
+	--_outline-color: rgba(0, 0, 0, 0.5);
+	--_pressed-outline-color: rgba(0, 0, 0, 0.5);
+	--md-outlined-button-icon-size: 24px;
+	--md-outlined-button-icon-color: white;
+	--md-outlined-button-hover-icon-color: white;
+	--_pressed-icon-color: white;
+	--_focus-icon-color: white;
 	transition: all 0.3s ease;
 }
 #advancedToggleBtn.advancedEnabled{
-	background: #6200ea;
+	background: #135200;
 	--_hover-label-text-color: white;
 	--_label-text-color: white;
 	--_pressed-label-text-color: white;
 	--_focus-label-text-color: white;
 	--md-sys-typescale-label-large-size: 18px;
-	font-weight: 600;
+	font-weight: 350;
 	--md-outlined-button-outline-width: 0px;
+	--md-outlined-button-icon-size: 24px;
+	--md-outlined-button-icon-color: white;
+	--md-outlined-button-hover-icon-color: white;
+	--_pressed-icon-color: white;
+	--_focus-icon-color: white;
 	transition: all 0.3s ease;
-}
-
-
-md-icon-button .threeDotMenuComponentAction{
-	--md-icon-button-hover-state-layer-opacity: 0.6;
-}
-md-icon-button .threeDotMenuComponentAnimation{
-	--md-icon-button-hover-state-layer-opacity: 0.4;
 }
 
 
@@ -75,74 +96,32 @@ md-icon-button .threeDotMenuComponentAnimation{
 	font-size: 14px;
 	padding: 19.6px;
 }
-.navDrawerListItem mwc-list-item {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-.navDrawerListItem mwc-list-item[active] {
-  background-color: #4a445851;
-}
-
-.navDrawerListItem mwc-list-item::part(active-indicator) {
-  height: 56px;
-  width: 336px;
-  border-radius: 28px;
-}
 
 
 .navDrawerListItem {
-	--mdc-ripple-color: rgba(192, 22, 22, 0.8);
-	border-radius: 44px;
+	
+	border-radius: 56px;
 	display: flex;
 	height: 44px;
 	align-items: center;
-	padding: 12px 16px;
-	
-	margin: 0 12px;
-	cursor: pointer;
+	margin: 0 24px 0 16px;
+	padding: 6px 0;
+	--md-list-item-leading-icon-color: black;
 	transition: background-color 0.3s ease;
 }
-.navDrawerListItemActive{
-	background-color: rgba(232, 222, 248);
-	--mdc-ripple-color: rgba(192, 22, 22, 0.8);
-	border-radius: 44px;
-	display: flex;
-	height: 44px;
-	align-items: center;
-	padding: 12px 16px;
-	
-	margin: 0 12px;
-	cursor: pointer;
-}
-
-.navDrawerListItem:hover {
-  background-color: rgb(187, 178, 200); 
-}
-
-
-
-
-.navDrawerListItem .label {
-	margin-left: 12px;
-	flex-grow: 1;
+#navDrawerListItemActive{
+	background-color: rgba(0, 238, 255, 0.25);
 }
 .navDrawerStyle{
     position: fixed;
     top: 0;
-    left: -100%;     
-    width: 280px;
+    left: -240px;     
+    width: 240px;
     height: 100%;
 	border-top-right-radius: 16px;
     background: white;
     transition: left 0.3s ease;
     z-index: 900;
-}
-.navDrawerListItemBtn{
-	display: flex;
-	align-items: center;
-	padding-left: 28px;
-	padding-right: 28px;
 }
 .navDrawerBlur{
 	position: fixed;
@@ -256,7 +235,14 @@ md-icon-button .threeDotMenuComponentAnimation{
 .threeDotMenuWindow.open {
 	bottom: 0;
 }
-
+#threeDotMenuClose{
+	height: 56px;
+	width: 56px;
+	--_container-color: rgba(0, 0, 0, 0.06);
+}
+#threeDotMenuClose #threeDotMenuCloseX{
+	font-size: 28px;
+}
 .threeDotMenuWindowBlur{
 	position: fixed;
     top: 0;
@@ -279,7 +265,13 @@ md-icon-button .threeDotMenuComponentAnimation{
 	padding: 10px;
 	flex-direction: row-reverse;
 }
-
+.threeDotMenuItem{
+	display: flex;
+	height: 44px;
+	align-items: center;
+	
+	padding: 6px 0;
+}
 
 
 
