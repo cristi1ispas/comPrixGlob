@@ -1,0 +1,667 @@
+<!DOCTYPE HTML>
+<html> 
+	<head>
+		<meta name = "viewport" content="initial-scale=1, width=device-width">
+		<title> comPrix </title>
+		
+		
+
+		<link rel="stylesheet" type="text/css" href="../static/style.css">
+		<link rel="stylesheet" type="text/css" href="../static/styles/contributePage.css">
+		<link rel="stylesheet" type="text/css" href="../static/styles/categoryChips.css">
+		<link rel="stylesheet" type="text/css" href="../static/styles/filterToggleTO-BE-DEPRICATED.css">
+		<link rel="stylesheet" type="text/css" href="../static/styles/filtersFAB.css">
+
+		
+		<!-- Material Web -->
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+			<script type="importmap">
+			{
+				"imports": {
+				"@material/web/": "https://esm.run/@material/web/"
+				}
+			}
+			</script>
+			<script type="module">
+				import '@material/web/all.js';
+				import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+
+				document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+			</script>
+			
+
+			
+		<!-- END OF Material Web -->
+
+		<!-- Mobile Test
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="banner.css">
+		<link rel="stylesheet" type="text/css" href="navDrawer.css">
+		<link rel="stylesheet" type="text/css" href="contributeUpdatePrice.css">
+		<link rel="stylesheet" type="text/css" href="contributeAnounceDiscount.css">
+		<link rel="stylesheet" type="text/css" href="contributePage.css">
+		<link rel="stylesheet" type="text/css" href="shopPage.css">
+		<link rel="stylesheet" type="text/css" href="productPage.css">
+		<link rel="stylesheet" type="text/css" href="pageGridX2.css">
+		<link rel="stylesheet" type="text/css" href="advancedFAB.css">
+		<link rel="stylesheet" type="text/css" href="navBar.css">
+
+		-->
+
+
+	</head>
+	<body style="margin: 0px; font-family: 'Roboto', sans-serif; background-color: antiquewhite;">
+		<!-- BEGIN BANNER -->
+		<link rel="stylesheet" type="text/css" href="../static/styles/banner.css">
+
+		<div id="banner">
+			<div id="topRow">
+				<md-icon-button id="navDrawerMenuBtn" class="topRowIcons navDrawerAction">
+					<md-icon>menu</md-icon>
+				</md-icon-button>
+
+				<div id="searchBar" class="searchViewWindowAction">
+					<span id="searchBtnText">Search in products</span>
+				</div>
+
+				<md-icon-button id="threeDotBtn" class="topRowIcons threeDotMenuComponentAction">
+					<md-icon>more_vert</md-icon>
+				</md-icon-button>
+
+				<md-menu menu-corner="start-end" anchor-corner="end-start" has-overflow positioning="popover" id="threeDotMenu" anchor="threeDotBtn" x-offset="-36" y-offset="-14">
+					<md-menu-item href="https://www.github.com/cristi1ispas/comprixglob" target="_blank">
+						<md-icon slot="start">code</md-icon>
+						<div slot="headline">GitHub</div>
+						<md-icon slot="end">open_in_new</md-icon>
+					</md-menu-item>
+
+					<md-menu-item>
+						<md-icon slot="start">info</md-icon>
+						<div slot="headline">About</div>
+					</md-menu-item>
+				</md-menu>
+			</div>
+			<div id="ribbonRow">
+				<md-filled-tonal-button id="locationAriaBtn">
+					<span slot="icon" class="material-symbols-outlined">near_me</span>
+					Kirchentellinsfurt
+				</md-filled-tonal-button>
+
+				<!-- Advanced -->
+				<div id="filterToggle">
+					<label for="switchFilterToggle">Filters</label>
+					<md-switch id="switchFilterToggle" icons></md-switch>
+				</div>
+			</div>
+		</div>
+
+		<!-- Search Feature -->
+
+		<div id="searchFeature" class="searchViewWindowAnimation">
+			<md-filled-text-field type="search" placeholder="Search..." id="searchTextField">
+				<md-icon-button slot="leading-icon" class="topRowIcons searchViewWindowAction">
+					<md-icon>arrow_back</md-icon>
+				</md-icon-button>
+				<md-icon-button slot="trailing-icon" class="topRowIcons">
+					<md-icon>close</md-icon>
+				</md-icon-button>
+			</md-filled-text-field>
+			<md-list class="autocompleteSearch">
+				<md-list-item type="button">
+					<div slot="headline">in brands:</div>
+				</md-list-item>
+				<md-list-item type="button">
+					<div slot="headline">by flavors:</div>
+				</md-list-item>
+				<md-list-item type="button">
+					<div slot="headline">for quantity:</div>
+				</md-list-item>
+				<md-list-item type="button">
+					<div slot="headline">in brands:</div>
+				</md-list-item>
+				<md-list-item type="button">
+					<div slot="headline">in brands:</div>
+				</md-list-item>
+			</md-list>
+		</div>
+
+		<div id="searchViewWindow" class="searchViewWindowAnimation">
+
+		</div>
+		
+
+		<md-menu has-overflow positioning="popover" id="locationAriaMenu" anchor="locationAriaBtn">
+			<md-sub-menu menu-corner="start-start" anchor-corner="end-end">
+				<md-menu-item slot="item">
+					<div slot="headline">Kusterdingen</div>
+					<md-icon slot="end">arrow_drop_down</md-icon>
+				</md-menu-item>
+				<md-menu slot="menu" has-overflow positioning="popover" x-offset="-40" y-offset="-12">
+					<md-menu-item>
+						<div slot="headline">Kusterdingen</div>
+						<div slot="supporting-text">Shops: 15</div>
+					</md-menu-item>
+					<md-menu-item>
+						<div slot="headline">Jettenburg</div>
+						<div slot="supporting-text">Shops: 13</div>
+					</md-menu-item>
+					<md-menu-item>
+						<div slot="headline">Wankheim</div>
+						<div slot="supporting-text">Shops: 9</div>
+					</md-menu-item>
+					<md-menu-item>
+						<div slot="headline">Mähringen</div>
+						<div slot="supporting-text">Shops: 5</div>
+					</md-menu-item>
+					<md-menu-item>
+						<div slot="headline">Immenhausen</div>
+						<div slot="supporting-text">Shops: 3</div>
+					</md-menu-item>
+				</md-menu>
+			</md-sub-menu>
+			<md-sub-menu menu-corner="start-start" anchor-corner="end-end">
+				<md-menu-item slot="item">
+					<div slot="headline">Kunszentmiklós</div>
+					<md-icon slot="end">arrow_drop_down</md-icon>
+				</md-menu-item>
+				<md-menu slot="menu" has-overflow positioning="popover" x-offset="-40" y-offset="-12">
+					<md-menu-item>
+						<div slot="headline">Kunszentmiklós</div>
+						<div slot="supporting-text">Shops: 12</div>
+					</md-menu-item>
+					<md-menu-item>
+						<div slot="headline">Felsőmocsolád</div>
+						<div slot="supporting-text">Shops: 8</div>
+					</md-menu-item>
+					<md-menu-item>
+						<div slot="headline">Kisújszállás</div>
+						<div slot="supporting-text">Shops: 6</div>
+					</md-menu-item>
+					<md-menu-item>
+						<div slot="headline">Szentmiklós</div>
+						<div slot="supporting-text">Shops: 3</div>
+					</md-menu-item>
+					<md-menu-item>
+						<div slot="headline">Sződliget</div>
+						<div slot="supporting-text">Shops: 3</div>
+					</md-menu-item>
+					<md-menu-item>
+						<div slot="headline">Tiszakécske</div>
+						<div slot="supporting-text">Shops: 0</div>
+					</md-menu-item>
+				</md-menu>
+			</md-sub-menu>
+			<md-menu-item>
+				<div slot="headline">Cucumber</div>
+			</md-menu-item>
+		</md-menu>
+
+		
+
+		<!-- END OF BANNER -->
+
+		<!-- BEGIN navDrawer -->
+
+		<link rel="stylesheet" type="text/css" href="../static/styles/navDrawer.css">
+		
+		<div class="navDrawerAnimation navDrawerStyle">
+			<div style="font-size: 24px; padding: 24px;">project Mushroom</div>
+			<md-divider style="padding: 0;"></md-divider>
+			<md-list>
+				
+				<md-list-item type="button" class="navDrawerListItem" href="/news">
+					<md-icon slot="start">newspaper</md-icon>
+					News
+				</md-list-item>
+				
+				<md-list-item type="button" class="navDrawerListItem" href="/discounts">
+					<md-icon slot="start">percent</md-icon>
+					Discounts
+				</md-list-item>
+
+				<md-list-item type="button" class="navDrawerListItem" href="/shops">
+					<md-icon slot="start">store</md-icon>
+					Shops
+				</md-list-item>
+				<md-list-item type="button" class="navDrawerListItem" href="/compare">
+					<md-icon slot="start">compare_arrows</md-icon>
+					Compare
+				</md-list-item>
+				<md-list-item type="button" class="navDrawerListItem" href="/manager">
+					<md-icon slot="start">engineering</md-icon>
+					Manager program
+				</md-list-item>
+				<md-divider></md-divider>
+				<md-list-item type="button" class="navDrawerListItem" href="/settings">
+					<md-icon slot="start">settings</md-icon>
+					Settings
+				</md-list-item>
+				<md-list-item type="button" class="navDrawerListItem" href="/help">
+					<md-icon slot="start">help</md-icon>
+					Help & feedback
+				</md-list-item>
+			</md-list>
+			<div>build 00:37 - 31/01</div>
+			
+		</div>
+
+		<div id="navDrawerBlur" class="navDrawerAnimation navDrawerAction"></div>
+		
+		<!-- END OF navDrawer -->
+
+		
+<!-- PAGE ITSELF -->
+
+		
+		<div id="page" style="background-color: aquamarine;">
+
+
+			
+
+			<div id="categoryChipsWraper">
+				<md-chip-set id="categoryChips">
+					<md-filter-chip label="Sodas">
+						<md-icon slot="icon">cleaning</md-icon>
+					</md-filter-chip>
+					<md-filter-chip label="Chips">
+						<md-icon slot="icon">money_bag</md-icon>
+					</md-filter-chip>
+					<md-filter-chip label="Sweets">
+						<md-icon slot="icon">cookie</md-icon>
+					</md-filter-chip>
+					<md-filter-chip label="Crackers">
+						<md-icon slot="icon">pet_supplies</md-icon>
+					</md-filter-chip>
+					<md-filter-chip label="Fasting">
+						<md-icon slot="icon">nutrition</md-icon>
+					</md-filter-chip>
+					<md-filter-chip label="Grill">
+						<md-icon slot="icon">outdoor_grill</md-icon>
+					</md-filter-chip>
+					<md-filter-chip label="Beverages">
+						<md-icon slot="icon">liquor</md-icon>
+					</md-filter-chip>
+				</md-chip-set>
+			</div>
+
+
+            <!--        -->
+
+
+
+			<link rel="stylesheet" type="text/css" href="../static/styles/contributeUpdatePrice.css">
+
+			<div id="contributeUpdatePriceWraper">
+				<form action="/update_price.php">		<!-- Path For PHP -->
+					<div>
+						<md-outlined-select has-leading-icon clamp-menu-width no-asterisk label="Select the shop" id="contributeUpdatePriceShopSelect" name="shop" required>
+							<md-icon slot="leading-icon">question_mark</md-icon>
+							<md-select-option value="EllaStore">
+								<md-icon slot="start">storefront</md-icon>
+								<div slot="headline">Georgi</div>
+								<i slot="supporting-text">Formerly known as: <b>Ella Store</b></i>
+							</md-select-option>
+							<md-select-option value="ElizaPoticaSRL">
+								<md-icon slot="start">store</md-icon>
+								<div slot="headline">Potica</div>
+								<i slot="supporting-text">Formerly known as: <b>Eliza Potica SRL</b></i>
+							</md-select-option>
+							<md-select-option value="MedinaSRL">
+								<md-icon slot="start">storefront</md-icon>
+								<div slot="headline">Medina</div>
+								<i slot="supporting-text">Formerly known as: <b>Medina SRL</b></i>
+							</md-select-option>		<!-- NOT SURE -->
+						</md-outlined-select>
+						<md-outlined-select has-leading-icon clamp-menu-width no-asterisk label="Select the category" id="contributeUpdatePriceCategorySelect" name="category" required>
+							<md-icon slot="leading-icon">question_mark</md-icon>
+							<md-select-option value="sodas">
+								<md-icon slot="start">cleaning</md-icon>
+								<div slot="headline">Sodas</div>
+							</md-select-option>
+							<md-select-option value="chips">
+								<md-icon slot="start">money_bag</md-icon>
+								<div slot="headline">Chips</div>
+							</md-select-option>
+							<md-select-option value="crackers">
+								<md-icon slot="start">pet_supplies</md-icon>
+								<div slot="headline">Crackers</div>
+							</md-select-option>
+							<md-select-option value="sweets">
+								<md-icon slot="start">cookie</md-icon>
+								<div slot="headline">Sweets</div>
+							</md-select-option>
+							<md-select-option value="fasting">
+								<md-icon slot="start">nutrition</md-icon>
+								<div slot="headline">Fasting</div>
+							</md-select-option>
+							<md-select-option value="grill">
+								<md-icon slot="start">outdoor_grill</md-icon>
+								<div slot="headline">Grill</div>
+							</md-select-option>
+							<md-select-option value="beverages">
+								<md-icon slot="start">liquor</md-icon>
+								<div slot="headline">Beverages</div>
+							</md-select-option>
+						</md-outlined-select>
+
+						<img src="https://static.mega-image.ro/medias/sys_master/h01/hba/9280617840670.jpg?buildNumber=cb7fdbea3c2688daa9f54fabf22999fc81b2d9e55068ada907625ac6a61dc804&imwidth=300" alt="Image 1">
+
+						<md-filled-text-field label="Search for the product(optional)"></md-filled-text-field>
+
+						<md-outlined-select clamp-menu-width no-asterisk label="Select the brand" id="contributeUpdatePriceBrandSelect" name="brand" required>
+							<md-select-option value="Pepsi">
+								<div slot="headline">Pespi</div>
+							</md-select-option>
+							<md-select-option value="Coca-cola">
+								<div slot="headline">Coca Cola</div>
+							</md-select-option>
+							<md-select-option value="Fanta">
+								<div slot="headline">Fanta</div>
+							</md-select-option>
+						</md-outlined-select>
+						<md-outlined-select clamp-menu-width no-asterisk label="Select the name" id="contributeUpdatePriceNameSelect" name="name" required>
+							<md-select-option value="pepsi">
+								<div slot="headline">Pespi</div>
+							</md-select-option>
+							<md-select-option value="coca-cola">
+								<div slot="headline">Coca Cola</div>
+							</md-select-option>
+							<md-select-option value="fanta">
+								<div slot="headline">Fanta</div>
+							</md-select-option>
+						</md-outlined-select>
+						<div class="inRowFlavLitters">
+							<md-outlined-select style="flex-grow: 1;" clamp-menu-width no-asterisk label="Select the flavor" id="contributeUpdatePriceFlavorSelect" name="flavor" required>
+								<md-select-option value="original">
+									<div slot="headline">Original</div>
+								</md-select-option>
+								<md-select-option value="twist">
+									<div slot="headline">Twist</div>
+								</md-select-option>
+								<md-select-option value="sugar0">
+									<div slot="headline">Zero Sugar</div>
+								</md-select-option>
+								<md-select-option value="sugar0Max">
+									<div slot="headline">Zero Sugar Max Taste</div>
+								</md-select-option>
+							</md-outlined-select>
+							<md-outlined-select style="max-width: 120px; min-width: 85px;" clamp-menu-width no-asterisk label="L" id="contributeUpdatePriceCapacitySelect" name="capacity" required>
+								<md-select-option value="0.2L">
+									<div slot="headline">0.2 L</div>
+								</md-select-option>
+								<md-select-option value="0.33L">
+									<div slot="headline">0.33 L</div>
+								</md-select-option>
+								<md-select-option value="0.5L">
+									<div slot="headline">0.5 L</div>
+								</md-select-option>
+								<md-select-option value="1L">
+									<div slot="headline">1 L</div>
+								</md-select-option>
+								<md-select-option value="1.25L">
+									<div slot="headline">1.25 L</div>
+								</md-select-option>
+								<md-select-option value="2L">
+									<div slot="headline">300 g</div>
+								</md-select-option>
+								<md-select-option value="2.5L">
+									<div slot="headline">2.5 L</div>
+								</md-select-option>
+							</md-outlined-select>
+						</div>
+						<div id="contributeUpdatePriceFields">
+							<b class="contributeFormSpecificActionHeadline">Price:</b>
+							<div id="contributeUpdatePriceFieldsOld" >
+								<md-outlined-text-field name="priceOLD" type="number" label="Old price:" value="12.99" suffix-text="RON" inputmode="decimal" id="contributeUpdatePriceFieldsOldPrice" disabled></md-outlined-text-field>
+
+								<md-outlined-text-field name="sourceOLD" label="Source:" value="Shelf" id="contributeUpdatePriceFieldsOldSource" disabled>
+									<md-icon slot="leading-icon">shelves</md-icon>
+								</md-outlined-text-field>
+							</div>
+							<sup style="margin-bottom: 8px; align-self: flex-start;">Last updated: 19:40 - 27/01/2026; By: $username$</sup>
+							
+							<md-icon style="margin-bottom: 16px;">south</md-icon>
+
+							<div id="contributeUpdatePriceFieldsNew">
+								<md-outlined-text-field no-asterisk name="price" type="number" label="Enter the new price:" value="12.99" suffix-text="RON"  id="contributeUpdatePriceFieldsNewPrice" min="0" max="999.99" size="4" step="0.01" inputmode="decimal" required></md-outlined-text-field>
+
+								<md-outlined-select has-leading-icon no-asterisk label="Source:" value="Cashout" selected id="contributeUpdatePriceFieldsNewSource" name="sourceOLD" required>
+									<md-icon slot="leading-icon">shelves</md-icon>
+									<md-select-option value="Official">
+										<md-icon slot="start">cloud_download</md-icon>
+										<div slot="headline">Official</div>		<!-- IDK needs other name -->
+									</md-select-option>
+									<md-select-option value="Shelf">
+										<md-icon slot="start">shelves</md-icon>
+										<div slot="headline">Shelf</div>
+									</md-select-option>
+									<md-select-option value="Cashout">
+										<md-icon slot="start">point_of_sale</md-icon>
+										<div slot="headline">Cashout</div>
+									</md-select-option>
+								</md-outlined-select>
+							</div>
+							<sup style="align-self: flex-start;">Example: <b>5</b> ; <b>6.50</b> ; <b>12,05</b> ; <b>8.4</b> ; <b>123,99</b></sup>
+						</div>
+						<div class="contributeSubmitButton">
+							<md-filled-button type="submit" disabled>
+								<md-icon slot="icon">check_circle</md-icon>
+								Submit
+							</md-filled-button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+
+
+            <!--        -->
+
+
+			
+		</div>
+
+		<!-- BEGIN FAB MENU -->
+
+
+		<md-dialog id="discardFiltersDialog" type="alert">
+			<div slot="headline">
+				<md-icon slot="icon">warning</md-icon>
+				Filters not applied
+			</div>
+			<form slot="content" id="form-id" method="dialog">
+				Are you sure you want to dismiss the changes?
+			</form>
+			<div slot="actions" class="actions">
+				<md-filled-button form="form-id" value="dismiss">Dismiss</md-filled-button>
+				<md-outlined-button form="form-id" value="cancel">
+					<md-icon sot="icon">cancel</md-icon>
+					Cancel
+				</md-outlined-button>
+			</div>
+		</md-dialog>
+		
+		<!-- Search FAB -->
+		
+		<md-fab id="searchFAB" class="filtersFabMenuAnimation searchViewWindowAction">
+			<md-icon slot="icon">search</md-icon>
+		</md-fab>
+
+		<div>
+			<md-fab id="filtersConfirmFAB" class="filtersFabMenuAnimation filtersFabMenuAction filtersFabAction" label="Apply">
+				<md-icon slot="icon">check</md-icon>
+			</md-fab>  
+
+			<!-- Remove and replace with <md-icon-button> -->
+
+			<md-elevated-button id="filtersFAB" class="filtersFabAnimation filtersFabAction filtersFabMenuAction filtersFabMenuAnimation">
+				<md-icon >tune</md-icon>
+				
+			</md-elevated-button>
+
+			<md-icon-button id="filtersFabIconBtnClose" class="filtersFabMenuAnimation filtersFabMenuAction filtersFabAction" toggle>
+				<md-icon>close</md-icon>
+			</md-icon-button>
+
+			
+			<div id="filtersFabMenuWraper" class="filtersFabMenuAnimation">
+				<md-filled-tonal-button id="filterBrandBtn" trailing-icon>
+					Brand
+					<md-icon slot="icon">arrow_drop_down</md-icon>
+				</md-filled-tonal-button>
+				
+				<md-filled-tonal-button id="filterFlavorBtn" trailing-icon>
+					Flavor
+					<md-icon slot="icon">arrow_drop_down</md-icon>
+				</md-filled-tonal-button>
+
+				<md-filled-tonal-button trailing-icon>
+					Capacity
+					<md-icon slot="icon">arrow_drop_down</md-icon>
+				</md-filled-tonal-button>
+				<div>
+					<div class="filterOrderStack">
+						<md-filled-icon-button id="filterDefaultOrderPrice" toggle class="filterDefaultOrder">
+							<md-icon>height</md-icon>
+							<md-icon slot="selected"> </md-icon>
+						</md-filled-icon-button>
+						<md-filled-tonal-icon-button id="filterOrderPrice" toggle class="filterOrder">
+							<md-icon>arrow_upward</md-icon>
+							<md-icon slot="selected">arrow_downward</md-icon>
+						</md-filled-tonal-icon-button>
+					</div>
+					
+					<md-filled-tonal-button id="filterPriceBtn" trailing-icon>
+						price
+						<md-icon slot="icon">arrow_drop_down</md-icon>
+					</md-filled-tonal-button>
+				</div>
+				<md-filled-tonal-button id="filterTESTBtn" trailing-icon>
+					Completeggggg
+					<md-icon slot="icon">arrow_drop_down</md-icon>
+				</md-filled-tonal-button>
+				
+
+			</div>
+		</div>
+
+		<div>
+			
+			<div id="filterBrandMenu" class="filterMenuListsWraper">
+				<div class="filterMenuListsHeadline">
+					<h2>Brands</h2>
+					<md-icon-button class="filterMenuListsClose">
+						<md-icon>close</md-icon>
+					</md-icon-button>
+				</div>
+
+				<md-divider></md-divider>
+
+				<md-list>
+
+					{% block filterBrand %}{% endblock %}
+					
+				</md-list>
+			</div>
+			<div id="filterFlavorMenu" class="filterMenuListsWraper">
+				<div class="filterMenuListsHeadline">
+					<h2>Flavors</h2>
+					<md-icon-button class="filterMenuListsClose">
+						<md-icon>close</md-icon>
+					</md-icon-button>
+				</div>
+
+				<md-divider></md-divider>
+				
+				<md-list>
+					
+					{% block filterFlavor %}{% endblock %}
+					
+				</md-list>
+			</div>
+			<div id="filterPriceMenu" class="filterMenuListsWraper">
+				
+				<div class="filterMenuListsHeadline">
+					<h2>Price</h2>
+					<md-icon-button class="filterMenuListsClose">
+						<md-icon>close</md-icon>
+					</md-icon-button>
+				</div>
+
+				<md-divider></md-divider>
+
+				<md-slider id="filterPriceSlider" range min="0.00" max="20.00" value-start="0.00" value-end="20.00" step="0.01" labeled></md-slider>
+				<div id="filterPriceRanges">
+					<div>
+						<span style="display: flex; justify-content: flex-end;">Minimum price:</span>
+						<span>Maximum price:</span>
+					</div>
+					
+					<div>
+						<md-outlined-text-field id="filterPriceMin" type="number" placeholder="0.00"></md-outlined-text-field>
+
+						<span style="display: flex; align-items: center; font-size: xx-large;">-</span>
+
+						<md-outlined-text-field id="filterPriceMax" type="number" placeholder="20.00"></md-outlined-text-field>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+		<div id="filterMenuListsBlur" class="filterMenuListsClose"></div>
+
+		<div id="filtersFabBlur" class="filtersFabAnimation"></div>
+
+		<!-- END OF FAB MENU -->
+
+		
+
+		<!-- BEGIN NAVIGATION-->
+
+		<link rel="stylesheet" type="text/css" href="../static/styles/navBar.css">
+
+		<nav id="navBar">
+			<div class="navItem" onclick="window.location.href='/explore';">
+				<div class="navItemIcon active">
+					<md-icon class="material-symbols-outlined">explore</md-icon>
+				</div>
+				<span>Explore</span>
+			</div>
+			<div class="navItem" onclick="window.location.href='/forme';">
+				<div class="navItemIcon">
+					<md-icon class="material-symbols-outlined">favorite</md-icon>
+				</div>
+				<span>For me</span>
+			</div>
+			<div class="navItem" onclick="window.location.href='/cart';">
+				<div class="navItemIcon">
+					<md-icon class="material-symbols-outlined">shopping_cart</md-icon>
+				</div>
+				<span>Cart</span>
+			</div>
+			<div class="navItem" onclick="window.location.href='/contribute';">
+				<div class="navItemIcon">
+					<md-icon style="font-size: 28px; width: 28px;" class="material-symbols-outlined">crowdsource</md-icon>
+				</div>
+				<span>Contribute</span>
+			</div>
+		</nav>
+		<!-- END OF NAVIGATION -->
+		<!-- BEGIN FOOTER -->
+		<div class="footer">
+			
+		</div>
+		<!-- END OF FOOTER -->
+
+		
+		<script src="../static/app.js"></script>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+
+
+
+
+#page{
+	margin-top: 150px;
+	margin-bottom: 136px;
+}
+
+.no-color{
+	text-decoration: none;
+	color: inherit;
+}
+
+
+
+#searchFAB{
+	position: fixed;
+	bottom: 64px;
+	right: 0;
+	margin: 0 16px 16px 0;
+	z-index: 1100;
+	--_icon-size: 24px;
+	transform: translateX(0) translateY(0);
+	transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+#searchFAB.suspended{
+	transform: translateY(-112px);
+}
+#searchFAB.open{
+	transform: translateX(80px) translateY(-112px);
+}
+
+
+

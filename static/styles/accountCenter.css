@@ -1,0 +1,69 @@
+#accountCenter{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: orchid;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9900;
+    transform: translateX(100%);
+    transition: all 0.2s ease-in-out;
+}
+#accountCenter.open{
+    transform: translateX(0);
+}
+#accountCloseBtn{
+    align-self: flex-end;
+    padding: 4px;
+    width: 56px;
+    height: 56px;
+    --_icon-size: 32px;
+}
+#accountPreview{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+#accountPreviewIMG{
+    position: relative;
+    width: 148px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 6px solid blue;
+}
+#accountPhotoAdd{
+    position: absolute;
+	right: 0;
+    top: 92px;
+    width: 56px;
+    height: 56px;
+}
+md-list#accountSettingsList{
+    background-color: bisque;
+}
+md-list#accountSettingsList md-list-item.settingsTheme{
+    --md-list-item-top-space: 0;
+    --md-list-item-bottom-space: 0;
+    --md-list-item-leading-space: 0;
+    --md-list-item-trailing-space: 0;
+}
+md-list#accountSettingsList md-list-item.settingsTheme label[for="themeSwitch"]{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+}
+md-list#accountSettingsList md-list-item.settingsTheme label[for="themeSwitch"] .iconsAndThemeSwitch{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    margin: 12px 0 12px 0;
+}

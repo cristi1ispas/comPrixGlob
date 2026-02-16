@@ -1,0 +1,130 @@
+
+#banner{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 4px;
+    padding-bottom: 0;
+    width: 100%;
+    box-sizing: border-box; 
+	background-color: rgb(54, 195, 54);	
+}
+#topRow{
+    display: flex;
+    gap: 1px;
+}
+#searchBar{
+	display: flex;
+    flex-grow: 1;
+	height: 56px;
+	border-radius: 56px;
+	background-color: red;
+	align-items: center;
+    justify-content: center
+}
+.topRowIcons{
+    --_icon-size: 26px;
+    height: 56px;
+    width: 56px;
+}
+
+#searchViewWindow{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9000;
+    transform: translateX(60px) translateY(4px);
+    width: calc(100vw - 120px);
+    height: 56px;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s cubic-bezier(1, 0, 1, 0),width 0.3s cubic-bezier(1, 0, 1, 0), height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease-in-out;
+    
+}
+#searchViewWindow.open{
+    transform: translateX(0) translateY(0);
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    pointer-events: auto;
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out, height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease-in-out;
+
+}
+
+#searchFeature{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    z-index: 9001;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+}
+#searchFeature.open{
+    opacity: 1;
+    pointer-events: auto;
+}
+#searchFeature.open #searchTextField{
+    pointer-events: auto;
+    opacity: 1;
+}
+#searchFeature.open .autocompleteSearch{
+    pointer-events: auto;
+    opacity: 1;
+}
+
+#searchTextField{
+    width: 100vw;
+    height: 72px;
+    opacity: 0;
+    --md-filled-text-field-with-leading-icon-leading-space: 16px;
+    --md-filled-text-field-with-trailing-icon-trailing-space: 16px;
+    transition: all 0.7s ease-in-out;
+}
+#searchFeature .autocompleteSearch{
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+#searchFeature .autocompleteSearch md-list-item{
+    --md-list-item-leading-space: 56px;
+}
+#account{
+    --_icon-size: 32px;
+    height: 56px;
+    width: 56px;
+}
+
+#ribbonRow{
+	display: flex;
+	justify-content: space-between;
+    padding: 4px 6px;
+}
+
+#filterToggle{
+    display: flex;
+    gap: 6px;
+    align-self: center;
+    align-items: center;
+}
+#filterToggle label{
+    font-size: large;
+}
+
+
+#locationAriaBtn span[slot="icon"].material-symbols-outlined{
+    font-size: 20px;
+    font-variation-settings: 
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 20;
+}
+
+md-menu#locationAriaMenu, 
+md-menu#locationAriaMenu md-sub-menu md-menu[slot="menu"]
+{
+    max-height: 350px;
+}

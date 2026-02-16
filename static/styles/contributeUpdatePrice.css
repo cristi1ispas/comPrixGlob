@@ -1,0 +1,68 @@
+
+
+#contributeUpdatePriceWraper{
+    padding: 8px;
+	background-color: rgb(178, 204, 243);
+}
+#contributeUpdatePriceWraper form div{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+#contributeUpdatePriceWraper form div md-outlined-select{
+    --md-outlined-select-text-field-label-text-size: 20px;
+}
+
+#contributeUpdatePriceWraper form div md-outlined-text-field{
+    --md-outlined-text-field-input-text-size: 1.4rem;
+}
+#contributeUpdatePriceWraper form div img{
+    margin: 0 20vw 0 20vw;
+}
+#contributeUpdatePriceWraper form div md-outlined-select md-select-option div[slot="headline"]{
+    font-weight: 500;
+    font-size: large;
+}
+#contributeUpdatePriceWraper form div div.inRowFlavLitters{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    gap: 0;
+}
+#contributeUpdatePriceWraper form div div#contributeUpdatePriceFields{
+    gap: 0;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    padding: 6px 8px 8px 8px;
+    border: 1px solid gray;
+}
+#contributeUpdatePriceWraper form div div#contributeUpdatePriceFields #contributeUpdatePriceFieldsOld #contributeUpdatePriceFieldsOldPrice{
+    min-width: 150px;
+    flex-grow: 1;
+    --_disabled-input-text-opacity: 0.8;
+    --_disabled-label-text-opacity: 0.8;
+    --_disabled-outline-opacity: 0.8;
+}
+#contributeUpdatePriceWraper form div div#contributeUpdatePriceFields #contributeUpdatePriceFieldsNew #contributeUpdatePriceFieldsNewPrice{
+    min-width: 150px;
+    flex-grow: 1;
+}
+#contributeUpdatePriceWraper form div div#contributeUpdatePriceFields #contributeUpdatePriceFieldsOld #contributeUpdatePriceFieldsOldSource{
+    max-width: 150px;
+    --_disabled-input-text-opacity: 0.8;
+    --_disabled-label-text-opacity: 0.8;
+    --_disabled-outline-opacity: 0.8;
+    --_disabled-leading-icon-opacity: 0.8;
+}
+#contributeUpdatePriceWraper form div div#contributeUpdatePriceFields #contributeUpdatePriceFieldsOld, /**/ #contributeUpdatePriceWraper form div div#contributeUpdatePriceFields #contributeUpdatePriceFieldsNew
+{
+    flex-direction: row;
+    gap: 4px;
+}
+#contributeUpdatePriceWraper form div div#contributeUpdatePriceFields #contributeUpdatePriceFieldsNew #contributeUpdatePriceFieldsNewSource{
+    max-width: 200px;
+    min-width: 150px;
+}

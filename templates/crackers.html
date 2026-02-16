@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block body %} 
+    {% for product in products %}
+        <div class="gridItem">
+            <md-filled-icon-button>
+                <md-icon>category</md-icon>
+            </md-filled-icon-button>
+            <div>{{ product[1] }}</div>
+            <div>{{ product[2] or "—" }} Lei</div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{% block filter %}
+        {% for brand in brands %}
+            <md-list-item type="button">
+                <label>
+                    <span>{{ brand }}</span>
+                    <md-checkbox value="{{ brand }}"></md-checkbox>
+                </label>
+            </md-list-item>
+        {% endfor %}
+{% endblock %}
+
+<!-- TEMPLATE -->
+

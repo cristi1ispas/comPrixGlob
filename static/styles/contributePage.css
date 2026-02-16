@@ -1,0 +1,36 @@
+#contributeActions md-divider{
+    padding: 0;
+}
+#contributeActions md-list-item{
+    --md-elevation-level: 2;
+}
+#contributeActions md-elevated-button{
+    margin: 4px 8px;
+    --md-elevated-button-container-shape: 8px;
+    --_icon-size: 120px;
+}
+#contributeActions md-list-item img{
+    width: 90px;
+    height: auto;
+    aspect-ratio: 1/1;
+}
+#contributeActions md-list-item{
+    margin: 4px 8px;
+    border-radius: 8px;
+    box-shadow: 1px 3px 4px 1px rgba(0, 0, 0, 0.278);
+}
+#contributeActions md-list-item div[slot="headline"]{
+    font-size: large;
+    font-weight: 600;
+}
+
+.contributeFormSpecificActionHeadline{
+    padding-bottom: 12px;
+    font-size: larger;
+    align-self: flex-start;
+    color: #1d1b20;
+}
+form .contributeSubmitButton{
+    align-items: flex-end;
+    --md-filled-button-label-text-size: 1rem;
+}

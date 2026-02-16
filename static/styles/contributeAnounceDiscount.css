@@ -1,0 +1,56 @@
+#contributeAnounceDiscountWraper{
+    padding: 8px;
+	background-color: rgb(178, 204, 243);
+}
+#contributeAnounceDiscountWraper form div{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+#contributeAnounceDiscountWraper form div md-outlined-select{
+    --md-outlined-select-text-field-label-text-size: 20px;
+}
+
+#contributeAnounceDiscountWraper form div md-outlined-text-field{
+    --md-outlined-text-field-input-text-size: 1.4rem;
+}
+#contributeAnounceDiscountWraper form div img{
+    margin: 0 20vw 0 20vw;
+}
+#contributeAnounceDiscountWraper form div md-outlined-select md-select-option div[slot="headline"]{
+    font-weight: 500;
+    font-size: large;
+}
+#contributeAnounceDiscountWraper form div div.inRowFlavLitters{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    gap: 0;
+}
+#contributeAnounceDiscountWraper form div #contributeAnounceDiscountFields{
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    padding: 6px 8px 8px 8px;
+    border: 1px solid gray;
+}
+#contributeAnounceDiscountWraper form div #contributeAnounceDiscountFields div.percentageRowWraper{
+    gap: 4px;
+    flex-direction: row;
+    align-items: center;
+}
+#contributeAnounceDiscountWraper form div #contributeAnounceDiscountFields div.percentageRowWraper #contributeAnounceDiscountFieldsPercentage{
+    min-width: 120px;
+}
+#contributeAnounceDiscountWraper form div #contributeAnounceDiscountFields div.percentageRowWraper #contributeAnounceDiscountFieldsUsual{
+    --_disabled-input-text-opacity: 0.8;
+    --_disabled-label-text-opacity: 0.8;
+    --_disabled-outline-opacity: 0.8;
+}
+#contributeAnounceDiscountWraper .contributeSubmitButton{
+    flex-direction: row;
+    justify-content: space-between;
+    --md-filled-button-icon-size: 24px;
+}

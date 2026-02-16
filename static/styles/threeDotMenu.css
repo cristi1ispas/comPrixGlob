@@ -1,0 +1,51 @@
+
+.threeDotMenuWindow {
+	position: fixed;
+    bottom: -70%;     
+    width: 100%;
+    height: 70%;
+    background: white;
+    transition: bottom 0.3s ease;
+    z-index: 1000;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+}
+.threeDotMenuWindow.open {
+	bottom: 0;
+}
+#threeDotMenuClose{
+	height: 56px;
+	width: 56px;
+	--_container-color: rgba(0, 0, 0, 0.06);
+}
+#threeDotMenuClose #threeDotMenuCloseX{
+	font-size: 28px;
+}
+.threeDotMenuWindowBlur{
+	position: fixed;
+    top: 0;
+	left: 0;
+    width: 100%;
+    height: 100%;
+	pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.0);
+    z-index: 999;
+    transition: background-color 0.3s ease-out;
+}
+.threeDotMenuWindowBlur.open {
+	pointer-events: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+	
+}
+
+.threeDotMenuWindowTop{
+	display: flex;
+	padding: 10px;
+	flex-direction: row-reverse;
+}
+.threeDotMenuItem{
+	display: flex;
+	height: 44px;
+	align-items: center;
+	padding: 6px 0;
+}

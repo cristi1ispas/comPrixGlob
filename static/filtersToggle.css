@@ -1,0 +1,39 @@
+
+
+
+#filtersFAB{
+	display: flex;
+	position: fixed;
+	bottom: 64px;
+	right: -130px;
+	transform: translateX(0);
+	margin: 0 16px 16px 0;
+	height: 96px;
+	width: 96px;
+	z-index: 1100;
+	--_icon-size: 36px;
+	transition: all 0.2s ease-in-out;
+	--md-elevated-button-container-shape: 28px;
+	--_container-elevation: 4;
+}
+#filtersFAB.active{
+	transform: translateX(-130px);
+}
+#filtersFAB md-icon{
+	font-size: 36px;
+	width: 36px;
+	height: 36px;
+	transition: all 0.2s ease-in-out;
+}
+#filtersFAB.open{
+	--_container-color: rgb(153, 112, 175);
+	height: 56px;
+	width: 56px;
+	margin: 0 16px 56px 0;
+	--_icon-size: 0;
+}
+#filtersFAB.open md-icon{
+	font-size: 0;
+	width: 0;
+	height: 0;
+}

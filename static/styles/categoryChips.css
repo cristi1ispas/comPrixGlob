@@ -1,0 +1,19 @@
+#categoryChipsWraper{
+    width: 100vw;
+    padding: 4px;
+    box-sizing: border-box;
+}
+#categoryChips{
+    padding: 8px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 16px,
+        black calc(100% - 16px),
+        transparent
+    );
+}

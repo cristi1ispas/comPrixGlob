@@ -1,0 +1,267 @@
+
+
+#discardFiltersDialog{
+	max-width: 200px;
+	margin: auto 10px 106px auto;
+}
+#discardFiltersDialog div.actions{
+	display: flex;
+	justify-content: space-between;
+}
+#advancedFAB{
+	display: flex;
+	position: fixed;
+	bottom: 67px;
+	right: -130px;
+	margin: 0 16px 16px 0;
+	height: 96px;
+	width: 96px;
+	z-index: 1100;
+	--_icon-size: 36px;
+	transition: all 0.2s ease-in-out;
+	--md-elevated-button-container-shape: 28px;
+	--_container-elevation: 4;
+}
+#advancedFAB.active{
+	right: 0;
+}
+#advancedFAB md-icon{
+	font-size: 36px;
+	width: 36px;
+	height: 36px;
+	transition: all 0.2s ease-in-out;
+}
+#advancedFAB.open{
+	--_container-color: rgb(153, 112, 175);
+	height: 56px;
+	width: 56px;
+	margin: 0 16px 56px 0;
+	--_icon-size: 0;
+}
+#advancedFAB.open md-icon{
+	font-size: 0;
+	width: 0;
+	height: 0;
+}
+#advancedFabIconBtnClose{   /* CLOSE ICON */
+	display: flex;
+	position: fixed;
+	bottom: 67px;
+	right: 0;
+	height: 56px;
+	width: 56px;
+	z-index: 1100;
+	margin: 0 16px 56px 0;
+	--_icon-size: 24px;
+	pointer-events: none;
+	opacity: 0;
+	transition: all 0.2s ease-in-out;
+}
+#advancedFabIconBtnClose md-icon{
+	font-size: 0;
+	transition: all 0.2s ease-in-out;
+}
+#advancedFabIconBtnClose.open{
+	opacity: 1;
+	pointer-events: auto;
+}
+#advancedFabIconBtnClose.open md-icon{
+	font-size: 24px;
+}
+#advancedFiltersConfirmFAB{
+	display: flex;
+	position: fixed;
+	bottom: 67px;
+	left: -140px;
+	margin: 0 0 56px 16px;
+	z-index: 1100;
+	transition: left 0.4s ease-out;
+}
+#advancedFiltersConfirmFAB.open{
+	left: 0;
+}
+
+
+
+#advancedFabMenuWraper{
+	display: flex;
+	position: fixed;
+	bottom: 187px;
+	right: -100px;
+	transform: translateX(0);
+	flex-direction: column;
+    align-items: flex-end;
+	gap: 4px;
+	z-index: 1097;
+	transition: transform 0.6s ease-in;
+}
+#advancedFabMenuWraper md-filled-tonal-button{
+	--_container-height: 52px;
+	padding: 14px 16px 14px 24px;
+	max-width: 1px;
+	opacity: 0;
+	transition: max-width 0.4s ease-out, opacity 0.2s ease-out;
+}
+.filterOrderStack md-filled-tonal-icon-button, 
+.filterOrderStack md-filled-icon-button
+{
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.2s ease-out;
+}
+#advancedFabMenuWraper div md-filled-tonal-button{
+	--md-filled-tonal-button-container-shape-end-start: 2000px;
+	--md-filled-tonal-button-container-shape-start-start: 2000px;
+}
+#advancedFabMenuWraper md-filled-tonal-button md-icon, 
+#advancedFabMenuWraper div md-filled-tonal-button, 
+.filterDefaultOrder
+{
+	--_icon-size:28px
+	
+}
+.filterOrderStack md-filled-tonal-icon-button, 
+.filterOrderStack md-filled-icon-button
+{
+	--_container-height: 56px;
+	--_container-width: 50px;
+	--_container-shape-start-end: 2000px;
+	--_container-shape-end-end: 2000px;
+}
+#advancedFabMenuWraper div{
+	display: flex;
+	gap: 1px;
+}
+#advancedFabMenuWraper.open{
+	transform: translateX(-116px);
+	transition: transform 0.4s ease-out;
+}
+#advancedFabMenuWraper.open md-filled-tonal-button{
+	max-width: 180px;
+	opacity: 1;
+	transition: max-width 0.3s ease-in, opacity 0.3s ease-in;
+}
+#advancedFabMenuWraper.open div .filterOrderStack md-filled-tonal-icon-button, 
+#advancedFabMenuWraper.open div .filterOrderStack md-filled-icon-button
+{
+	pointer-events: auto;
+	opacity: 1;
+	transition: opacity 0.2s ease-out;
+}
+.filterOrderStack{
+	position: relative;
+	display: inline-block;
+}
+.filterOrderStack .filterDefaultOrder{
+	position: absolute;
+	inset: 0;
+	z-index: 1099;
+
+}
+.filterDefaultOrder[selected] {
+	transform: translateX(250px);
+}
+
+
+
+
+#advancedFabBlur{
+	position: fixed;
+	top: 0;
+    left: 0;     
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.0);
+	pointer-events: none;
+    z-index: 1096;
+    transition: background-color 0.2s ease-in;
+}
+#advancedFabBlur.open{
+	pointer-events: auto;
+	background-color: rgba(0, 0, 0, 0.65);
+}
+
+
+
+#filterMenuListsBlur{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1199;
+	pointer-events: none;
+}
+#filterMenuListsBlur.open{
+	pointer-events: auto;
+}
+.filterMenuListsWraper{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1200;
+	transform: translateY(80%);
+	pointer-events: none;
+	opacity: 0;
+	box-shadow: 0 0 0 0 rgb(0, 0, 0);
+	background-color: white;
+	transition: transform 0.8s ease-out, opacity 0.2s ease-in-out;
+}
+.filterMenuListsWraper.open{
+	transform: translateY(0);
+	pointer-events: auto;
+	opacity: 1;
+	box-shadow: 0 5px 22px 2px;
+	transition: transform 0.3s ease-out, opacity 0.2s ease-in-out;
+}
+.filterMenuListsHeadline h2{
+	padding: 0 0 0 20px;
+}
+.filterMenuListsHeadline md-icon-button{
+	height: 58px;
+	width: 58px;
+	--_icon-size: 32px;
+}
+md-divider{
+	padding: 0 5%;
+}
+.filterMenuListsWraper md-list md-list-item{
+	--md-list-item-top-space: 0;
+	--md-list-item-bottom-space: 0;
+	--md-list-item-leading-space: 0;
+	--md-list-item-trailing-space: 0;
+}
+.filterMenuListsWraper md-list md-list-item label,
+.filterMenuListsHeadline
+{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+.filterMenuListsWraper md-list md-list-item label span{
+	
+	padding-left: 20px;
+}
+.filterMenuListsWraper md-list md-list-item label md-checkbox{
+	margin: 20px;
+}
+#filterPriceMenu md-slider#filterPriceSlider{
+	margin: 30px 10px 20px 10px;
+	display: flex;
+}
+#filterPriceRanges{
+	display: flex;
+	flex-direction: column;
+	pointer-events: inherit;
+	margin: 0 8px 8px 8px;
+}
+#filterPriceRanges div{
+	display: flex;
+	gap: 5%;
+	justify-content: space-between;
+	pointer-events: inherit;
+}
+
+
